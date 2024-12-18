@@ -1,3 +1,55 @@
 body {
   background-color: whitesmoke;
 }
+#frontPage {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 3rem;
+  color: lightcoral;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  animation: pulse 2s infinite;
+}
+
+#frontPage:hover {
+  font-weight: bolder;
+  background-color: whitesmoke;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#welcomePargraph {
+  color: #4682b4;
+  font-size: 1.1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: fit-content;
+  text-align: center;
+}
+
+.textbox-container {
+  color: black;
+  font-size: 30px;
+  font-weight: 100;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  /* text-shadow: 1px 1px red; */
+}
