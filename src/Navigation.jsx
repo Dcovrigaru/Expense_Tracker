@@ -2,17 +2,22 @@ import { useState } from "react";
 import HomeSection from "./HomeSection";
 import "./designs/Navigation.css";
 
+import HomeLogo from "./assets/HomeLogo.jsx";
+import DashboardLogo from "./assets/DashboardLogo.jsx";
+import ReportsLogo from "./assets/ReportsLogo.jsx";
+import HistoryLogo from "./assets/HistoryLogo..jsx";
+
 function Navigation({ activeTab, setActiveTab }) {
   const [showAuthForm, setShowAuthForm] = useState(false);
   const [isLogin, setIsLogin] = useState(true);
 
-  const tabs = ["Home", "About", "Skills", "Projects"];
+  const tabs = ["Home", "Dashboard", "Reports", "History"];
 
   const tabComponents = {
     Home: <HomeSection />,
-    About: <div>About</div>,
-    Skills: <div>Skills</div>,
-    Projects: <div>Projects</div>,
+    Dashboard: <div>Dashboard</div>,
+    Reports: <div>Reports</div>,
+    History: <div>History</div>,
   };
 
   const AuthForm = ({ isLogin, onClose }) => {
@@ -45,7 +50,13 @@ function Navigation({ activeTab, setActiveTab }) {
                   activeTab === tab ? "tab-button active" : "tab-button"
                 }
               >
-                {tab}
+                {tab === "Home" && <HomeLogo />}
+
+                {tab === "Dashboard" && <DashboardLogo />}
+
+                {tab === "Reports" && <ReportsLogo />}
+                {tab === "History" && <HistoryLogo />}
+                {tab === "Home" ? "Home" : tab}
               </button>
             ))}
           </div>
