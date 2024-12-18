@@ -1,0 +1,140 @@
+/* Navigation Styles */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px; /* Sidebar width */
+  height: 100vh; /* Full height */
+  background-color: #2c3e50;
+  z-index: 1000;
+  overflow-y: auto; /* Ensure sidebar content is scrollable if needed */
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Adjust to start at the top */
+  height: 100%;
+  padding: 1rem;
+}
+
+.tab-buttons-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tab-button {
+  font-size: 20px;
+  background-color: transparent;
+  color: #ecf0f1;
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  text-align: left;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+  background-color: #34495e;
+}
+
+.tab-button.active {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+}
+
+.auth-buttons {
+  padding-top: 10px;
+  margin-top: auto;
+  border-top: 1px solid #34495e;
+}
+
+.auth-button {
+  width: 100%;
+  font-size: 18px;
+  background-color: transparent;
+  color: #ecf0f1;
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.auth-button:hover {
+  background-color: #34495e;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 250px; /* Same width as the sidebar */
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+/* Auth Dropdown (Login / Sign Up Form) */
+.auth-dropdown {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  position: absolute;
+  top: 80%; /* Position dropdown higher so it's visible */
+  left: 0;
+  width: 100%; /* Make it the same width as the parent */
+  max-width: 350px; /* Optional max width */
+  z-index: 1001; /* Make sure it appears above sidebar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10px; /* Space between button and form */
+}
+
+/* Close Button (X) for Auth Form */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #2c3e50;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #e74c3c;
+}
+
+.auth-dropdown h3 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.auth-dropdown form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-dropdown input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.auth-dropdown button[type="submit"] {
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.auth-dropdown button[type="submit"]:hover {
+  background-color: #34495e;
+}
